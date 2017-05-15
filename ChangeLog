@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.0.1
+-----
+
+* Initial commit. Command line interface to manage iam user public ssh keys
