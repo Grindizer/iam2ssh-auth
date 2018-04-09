@@ -2,7 +2,7 @@ import sys
 from cliff.app import App
 from cliff.commandmanager import CommandManager
 from cliff.lister import Lister
-from core import get_authorized_keys
+from . core import get_authorized_keys
 
 
 class IamAuthApp(App):
@@ -28,7 +28,6 @@ class AuthorizedKeys(Lister):
         return parser
 
     def take_action(self, args):
-        # import pdb; pdb.set_trace()
         return (
             ('UserName', 'SSHPublicKeyId', 'Status', 'SSHPublicKeyBody'),
             (
