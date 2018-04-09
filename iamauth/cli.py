@@ -23,7 +23,7 @@ class AuthorizedKeys(Lister):
         parser.add_argument('--group-name', '-g', help="The name of the group from which "
                                                        "to get the public ssh keys", required=True, dest='group')
         parser.add_argument('--source-account-role-arn', '-r', help="Thr ARN of the role to assume within the account "
-                                                                    "that manages the iam users", required=True,
+                                                                    "that manages the iam users", default='',
                             dest='role')
         return parser
 

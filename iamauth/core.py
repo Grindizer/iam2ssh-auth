@@ -8,6 +8,8 @@ def assume_role(role, session_name="NewSession"):
         with assume_role("somerole") as readonly:
             iam = readonly.client('iam')
     """
+    if not role:
+        return (yield boto3.Session())
     client = boto3.client('sts')
     response = client.assume_role(RoleArn=role, RoleSessionName=session_name)
     yield boto3.Session(
